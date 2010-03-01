@@ -144,8 +144,8 @@ function draw_map()
 	if (map_canvas && map_canvas.getContext) {
 		var context = map_canvas.getContext('2d');
 		if (context) {
-			for (var x = 0; x < game_map_data.width - 1; x++) {
-				for (var y = 0; y < game_map_data.height - 1; y++) {
+			for (var x = 0; x < game_map_data.width; x++) {
+				for (var y = 0; y < game_map_data.height; y++) {
 					
 					context.drawImage(grass, 50 * x,  50 * y);
 					

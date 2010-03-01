@@ -11,7 +11,7 @@ log = logging.getLogger(__name__)
 class EngineController(BaseController):
 	def generate(self):
 		players = []
-		for i in xrange(0, 3):
+		for i in xrange(0, 4):
 			faction = request.params.get('player_%s_faction' % i)
 			if faction != 'off':
 				footman = request.params.get('player_%s_footman' % i)
