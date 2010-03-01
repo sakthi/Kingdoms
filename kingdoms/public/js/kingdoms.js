@@ -21,6 +21,14 @@ function stop_ajax()
 	$("#progress").hide();
 }
 
+function preloadImages(arguments)
+{
+	for(var i = 0; i<arguments.length; i++) {
+		$("<img>").attr("src", arguments[i]);
+	}
+}
+
+
 function init_game(game_id)
 {
 	update_game_map(game_id);
@@ -30,6 +38,11 @@ function init_game(game_id)
 	$("#attack-command").hide();
 	
 	$("panel").corner();
+	preloadImages("/tiles/default/grass.png", 
+		"/tiles/default/footman/left.png", 
+		"/tiles/default/footman/rigth.png", 
+		"/tiles/default/archer/left.png", 
+		"/tiles/default/archer/rigth.png");
 }
 
 function object_move(game_id)
@@ -128,8 +141,8 @@ function select(game_id, event)
 	start_ajax();
 	
 	$.getJSON('/api/get_object', { game_id: game_id, x: pos_x, y: pos_y,
-								left: map.parentElement.offsetLeft,
-								top: map.parentElement.offsetTop }, 
+								left: map.parentNode.offsetLeft,
+								top: map.parentNode.offsetTop }, 
 						callback_object_selected );
 };
 
