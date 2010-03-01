@@ -51,6 +51,7 @@ class Hero(meta.Base):
 	__tablename__ = 'hero'
 	id = sa.Column(Integer, primary_key = True)
 	player_id = sa.Column(Integer, sa.ForeignKey('player.id'), nullable = False)
+	name = sa.Column(Unicode(150), nullable = False)
 
 class Army(meta.Base):
 	__tablename__ = 'army'
@@ -58,6 +59,9 @@ class Army(meta.Base):
 	id = sa.Column(Integer, primary_key = True)
 	hero_id = sa.Column(Integer, sa.ForeignKey('hero.id'), nullable = False)
 	player_id = sa.Column(Integer, sa.ForeignKey('player.id'), nullable = False)
+	
+	def get_hero(self):
+		return meta.Session.query(Hero).filter(Hero.id == hero_id).one()
 	
 	units = orm.relation(HiredUnit,  \
 		backref=orm.backref('in_army', remote_side='HiredUnit.army_id'))

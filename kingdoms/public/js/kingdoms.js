@@ -96,7 +96,7 @@ function callback_object_selected(answer)
 
 		if (answer.unit_type) {
 			var object_html = "<img src=\"/controls/banners/" + answer.obj.banner + "\" /><br/>";
-			object_html += answer.obj.count + "&nbsp;" + "<a href='/units/info/" + answer.obj.unit_type_id + "' >" +
+			object_html += answer.obj.count + "&nbsp;" + "<a href='/lobby/unit_info/" + answer.obj.unit_type_id + "' >" +
 				answer.unit_type.short_name + "(s)</a><br/>";
 			object_html += "<smaller>" + answer.unit_type.long_name + "</smaller>";
 		}

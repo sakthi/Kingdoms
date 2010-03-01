@@ -20,3 +20,7 @@ class LobbyController(BaseController):
 		self.check_auth()
 		c.units = meta.Session.query(UnitTypeDescriptor).all()
 		return render('skirmish.mako')
+
+	def unit_info(self, id):
+		c.unit = meta.Session.query(UnitTypeDescriptor).filter(UnitTypeDescriptor.id == int(id)).one()
+		return render('unit_info.mako')

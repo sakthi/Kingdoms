@@ -6,6 +6,7 @@ body
 	text-align: center;
 	margin: auto;
 	display: block;
+	color: LightGray;
 }
 
 table td
@@ -13,6 +14,26 @@ table td
 	background-repeat: no-repeat; 
 	background-position: center center;
 }
+
+table.details td {
+  vertical-align: middle;
+  text-align: right;
+}
+
+table.details td.name 
+{
+	text-align: right;
+	vertical-align: middle;
+	width: 10%;
+	font-weight: bold;
+}
+
+table.details td.value {
+  text-align: left;
+  vertical-align: middle;
+  width: 40%;
+}
+
 
 #panel
 {
