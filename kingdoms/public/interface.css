@@ -1,0 +1,43 @@
+body 
+{
+	background-color: #225239;
+	font-family: 'Lucida Grande', verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	text-align: center;
+	margin: auto;
+	display: block;
+}
+
+table td
+{
+	background-repeat: no-repeat; 
+	background-position: center center;
+}
+
+#panel
+{
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-color: #7a5923;
+	color: #443826;
+}
+#panel h3 { color: #225239;}
+
+#loading
+{
+	color: ;
+}
+
+#control
+{
+	padding: 10px 10px 10px 10px;
+	float: left;
+	width: 150px;
+}
+
+#control a { text-decoration: none; color: Gray;}
+#map
+{
+	float: right;
+}
+
