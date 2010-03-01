@@ -21,13 +21,6 @@ function stop_ajax()
 	$("#progress").hide();
 }
 
-function preloadImages(arguments)
-{
-	for(var i = 0; i<arguments.length; i++) {
-		$("<img>").attr("src", arguments[i]);
-	}
-}
-
 
 function init_game(game_id)
 {
@@ -38,11 +31,6 @@ function init_game(game_id)
 	$("#attack-command").hide();
 	
 	$("panel").corner();
-	preloadImages("/tiles/default/grass.png", 
-		"/tiles/default/footman/left.png", 
-		"/tiles/default/footman/rigth.png", 
-		"/tiles/default/archer/left.png", 
-		"/tiles/default/archer/rigth.png");
 }
 
 function object_move(game_id)
