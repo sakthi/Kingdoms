@@ -15,6 +15,8 @@ setup(
     install_requires=[
         "Pylons>=0.9.7",
         "SQLAlchemy>=0.5",
+        "repoze.who==1.0.10",
+        "repoze.who.plugins.formcookie>=0.2.3dev"
     ],
     setup_requires=["PasteScript>=1.6.3"],
     packages=find_packages(exclude=['ez_setup']),
